@@ -27,7 +27,7 @@ app.use(function (req, res, next) {
 const options = {
   allowEIO3: true,
 };
-var server = require('https',"http","wss").createServer(app)
+var server = require("http").createServer(app)
 const Socket_io = Server(server, options, {
   cors: {
     origin: '*',
