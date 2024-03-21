@@ -42,7 +42,13 @@ Socket_io.on('connection', async (socket) => {
 
 });
 
-
+app.get("/", async (req, res) => {
+  try {
+    res.status(200).send("Success");
+  } catch (error) {
+    res.status(500).send("Failed");
+  }
+});
 
 
 // Emit event when a task is added
